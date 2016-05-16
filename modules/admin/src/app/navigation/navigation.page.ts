@@ -1,4 +1,4 @@
-import {Login} from './Login';
+import {Login} from '../login/Login';
 
 export class NavigationTest {
     public login;

@@ -28,28 +28,10 @@ import { ShowMiniNav } from '../sidebar/ShowMiniNav';
 })
 
 @Routes([
-    {
-        path: '/dashboard/...', component: Dashboard, name: 'Dashboard',
-        data: {
-            showInSubNavigation: true,
-            icon: 'icon-bulb',
-            'fa-angle': '/icnDsh'
-        }, 
-        useAsDefault: true
-    },
-    { path: '/gsm/...', component: GSM, name: 'GSM', data: { showInSubNavigation: true, icon: 'icon-settings' } },
-    {
-        path: '/financesmain',
-        component: FinancesMain,
-        name: 'FinancesMain',
-        data: { showInSubNavigation: true, icon: 'icon-wallet' }
-    },
-    {
-        path: '/systemsettings',
-        component: SystemSettings,
-        name: 'SystemSettings',
-        data: { showInSubNavigation: true, icon: 'icon-settings' }
-    }
+    { path: '/dashboard/...', component: Dashboard },
+    { path: '/gsm/...', component: GSM },
+    { path: '/financesmain', component: FinancesMain },
+    { path: '/systemsettings', component: SystemSettings }
 ])
 
 export class Navigation implements OnInit {
@@ -57,6 +39,10 @@ export class Navigation implements OnInit {
 
     constructor(public router: Router, public translate: TranslateService, public showmininav: ShowMiniNav) {
         this.content = localStorage.getItem('rightWrite');
+
+        if(!this.content) {
+            this.router.navigateByUrl('/login');
+        }
     }
 
     logout() {

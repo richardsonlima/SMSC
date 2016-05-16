@@ -8,10 +8,10 @@
         </div>
     </a>
     <ul class="dashboard-submenu sub-menu-item" [ngClass]="{'nav-subitem-relative': showmininav.showNav, 'save-state-item': icnDsh}">
-        <li><a [class.activesub]="activeItem.isActiveSubDashboard('smstraffic')" [routerLink]="['./Dashboard', 'SMSTraffic']" class="smstraffic"><i class="subitem-icon-left icon-chart"></i>{{'SMSTRAFFIC' | translate}}</a></li>
-        <li><a [class.activesub]="activeItem.isActiveSubDashboard('dlrtraffic')" [routerLink]="['./Dashboard', 'DLRTraffic']" class="dlrtraffic"><i class="subitem-icon-left fa fa-wrench"></i>{{'DLRTRAFFIC' | translate}}</a></li>
-        <li><a [class.activesub]="activeItem.isActiveSubDashboard('finances')" [routerLink]="['./Dashboard', 'Finances']" class="finances"><i class="subitem-icon-left icon-docs"></i>{{'FINANCES' | translate}}</a></li>
-        <li><a [class.activesub]="activeItem.isActiveSubDashboard('customers')" [routerLink]="['./Dashboard', 'Customers']" class="customers"><i class="subitem-icon-left icon-puzzle"></i>{{'CUSTOMERS' | translate}}</a></li>
+        <li><a [class.activesub]="activeItem.isActiveSubDashboard('smstraffic')" [routerLink]="['./dashboard/smstraffic']" class="smstraffic"><i class="subitem-icon-left icon-chart"></i>{{'SMSTRAFFIC' | translate}}</a></li>
+        <li><a [class.activesub]="activeItem.isActiveSubDashboard('dlrtraffic')" [routerLink]="['./dashboard/dlrtraffic']" class="dlrtraffic"><i class="subitem-icon-left fa fa-wrench"></i>{{'DLRTRAFFIC' | translate}}</a></li>
+        <li><a [class.activesub]="activeItem.isActiveSubDashboard('finances')" [routerLink]="['./dashboard/finances']" class="finances"><i class="subitem-icon-left icon-docs"></i>{{'FINANCES' | translate}}</a></li>
+        <li><a [class.activesub]="activeItem.isActiveSubDashboard('customers')" [routerLink]="['./dashboard/customers']" class="customers"><i class="subitem-icon-left icon-puzzle"></i>{{'CUSTOMERS' | translate}}</a></li>
     </ul>
 </div>
 <h1>{{getStorageItem('/icnDs')}}</h1>

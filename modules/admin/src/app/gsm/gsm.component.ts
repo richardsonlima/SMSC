@@ -3,13 +3,13 @@ import {Component} from "@angular/core";
 import {TranslatePipe, TranslateService} from "ng2-translate/ng2-translate";
 import {CORE_DIRECTIVES} from "@angular/common";
 
-import {Monitoring} from '../monitoring/monitoring.component';
-import {Carriers} from '../carriers/carriers.component';
-import {Routing} from '../routing/routing.component';
-import {Prices} from '../prices/prices.component';
-import {MCCMNC} from '../mccmnc/mccmnc.component';
-import {SMPP} from '../smpp/smpp.component';
-import {API} from '../api/api.component';
+import {Monitoring} from 'monitoring/monitoring.component';
+import {Carriers} from 'carriers/carriers.component';
+import {Routing} from 'routing/routing.component';
+import {Prices} from 'prices/prices.component';
+import {MCCMNC} from 'mccmnc/mccmnc.component';
+import {SMPP} from 'smpp/smpp.component';
+import {API} from 'api/api.component';
 
 @Component({
     selector: 'gsm',
@@ -23,13 +23,13 @@ import {API} from '../api/api.component';
 })
 
 @Routes([
-    {path: '/monitoring', component: Monitoring, name: 'Monitoring', useAsDefault: true},
-    {path: '/carriers', component: Carriers, name: 'Carriers'},
-    {path: '/routing', component: Routing, name: 'Routing'},
-    {path: '/prices', component: Prices, name: 'Prices'},
-    {path: '/mccmnc', component: MCCMNC, name: 'MCCMNC'},
-    {path: '/smpp', component: SMPP, name: 'SMPP'},
-    {path: '/api', component: API, name: 'API'},
+    { path: '/monitoring', component: Monitoring },
+    { path: '/carriers', component: Carriers },
+    { path: '/routing', component: Routing },
+    { path: '/prices', component: Prices },
+    { path: '/mccmnc', component: MCCMNC },
+    { path: '/smpp', component: SMPP },
+    { path: '/api', component: API }
 ])
 
 export class GSM {

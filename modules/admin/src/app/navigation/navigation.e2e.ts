@@ -1,4 +1,4 @@
-import {NavigationTest} from '../testpages/NavigationTest';
+import {NavigationTest} from './navigation.page';
 
 describe('Navigation', () => {
     let ptor = protractor.wrapDriver(browser.driver);

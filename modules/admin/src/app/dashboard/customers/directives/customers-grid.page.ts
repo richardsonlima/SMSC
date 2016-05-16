@@ -1,4 +1,4 @@
-import {Login} from './Login';
+import {Login} from '../../../login/Login';
 import elementLocated = protractor.until.elementLocated;
 import elementsLocated = protractor.until.elementsLocated;
 
